@@ -153,3 +153,12 @@ span {
 .clock-d span:nth-child(3)::after {
     content: "seconds";
 }
+@media only screen and (max-width: 600px) {
+    .dropdown{
+        right: 40px;
+        top: -50px;
+    }
+    p{
+        font-size: 40px;
+    }
+}
