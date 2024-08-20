@@ -1,9 +1,9 @@
 let isclicked = false;
 setInterval(() => {
   let dateNow = new Date();
-  let hours = dateNow.getHours() + 1;
-  let minutes = dateNow.getMinutes();
-  let seconds = dateNow.getSeconds();
+  let hours = dateNow.getUTCHours();
+  let minutes = dateNow.getUTCMinutes();
+  let seconds = dateNow.getUTCSeconds();
   let p = document.querySelector("p");
   let a = document.querySelectorAll("a");
   if (hours === 24) {
@@ -11,7 +11,7 @@ setInterval(() => {
   }
   if (!isclicked) {
     document.querySelector(".hours").innerHTML =
-      `${hours}` < 10 ? `0${hours}` : hours;
+      `${hours}` < 10 ? `0${hours + 3}` : hours+3;
   }
   for (let i = 0; i < a.length; i++) {
     a[i].onclick = async () => {
