@@ -160,9 +160,12 @@ span {
     }
     .dropdown{
         right: 40px;
-        top: 5px;
+        top: -60px;
     }
     p{
         font-size: 40px;
+    }
+    .dropdown:hover .dropdown-content{
+        right: 10px
     }
 }
