@@ -154,6 +154,10 @@ span {
     content: "seconds";
 }
 @media only screen and (max-width: 600px) {
+    body{
+            height: 100vh;
+    width: 100vw;
+    }
     .dropdown{
         right: 40px;
         top: -50px;
