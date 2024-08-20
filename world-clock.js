@@ -1,7 +1,7 @@
 let isclicked = false;
 setInterval(() => {
   let dateNow = new Date();
-  let hours = dateNow.getHours() + 1;
+  let hours = dateNow.getHours();
   let minutes = dateNow.getMinutes();
   let seconds = dateNow.getSeconds();
   let p = document.querySelector("p");
