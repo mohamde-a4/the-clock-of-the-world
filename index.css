@@ -155,7 +155,7 @@ span {
 }
 @media only screen and (max-width: 600px) {
     html,body{
-            height: 95vh;
+            height: 100%;
     width: 100vw;
     }
     .dropdown{
