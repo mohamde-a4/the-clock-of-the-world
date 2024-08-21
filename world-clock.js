@@ -27,9 +27,6 @@ setInterval(() => {
         });
         p.innerHTML = `${Object.keys(ele[0])[i]} clock`;
         hours = formatter.format(dateNow).split(":")[0];
-        if (hours <= 0) {
-          hours = Math.abs(hours);
-        }
         console.log(Object.keys(ele[0])[i]);
         document.querySelector(".hours").innerHTML =
           `${hours}` < 10 ? `0${hours}` : hours;
