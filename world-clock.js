@@ -6,10 +6,10 @@ setInterval(() => {
   let seconds = dateNow.getUTCSeconds();
   let p = document.querySelector("p");
   let a = document.querySelectorAll("a");
+  if (hours === 24) {
+    console.log("hours does equal 24");
+  }
   if (!isclicked) {
-    if (hours === 24) {
-      console.log("hours does equal 24");
-    }
     hours= 0;
     document.querySelector(".hours").innerHTML =
     `${hours}` < 10 ? `0${hours}` : hours;
