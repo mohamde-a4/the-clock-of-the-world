@@ -6,11 +6,18 @@ setInterval(() => {
   let seconds = dateNow.getUTCSeconds();
   let p = document.querySelector("p");
   let a = document.querySelectorAll("a");
-  if (hours === 24) {
-    console.log("hours does equal 24");
+  switch (hours) {
+    case 24:
+      hours = 0;
+      break;
+    case 25:
+      hours = 1;
+      break;
+    case 26:
+      hours = 2;
+      break;
   }
   if (!isclicked) {
-    hours= 0;
     document.querySelector(".hours").innerHTML =
     `${hours}` < 10 ? `0${hours}` : hours;
   }
@@ -19,17 +26,17 @@ setInterval(() => {
       isclicked = true;
       let ele = await (await fetch("clock.json")).json();
       if (a[i].id === Object.keys(ele[0])[i]) {
-        let formatter = new Intl.DateTimeFormat('en-US', {
-          hour: 'numeric',
+        let formatter = new Intl.DateTimeFormat("en-US", {
+          hour: "numeric",
           hour12: false,
-          minute: 'numeric',
+          minute: "numeric",
           second: "numeric",
           timeZone: `${Object.values(ele[0])[i]}`,
         });
         p.innerHTML = `${Object.keys(ele[0])[i]} clock`;
         hours = formatter.format(dateNow).split(":")[0];
         console.log(Object.keys(ele[0])[i]);
-        document.querySelector(".hours").innerHTML =`${hours}`;
+        document.querySelector(".hours").innerHTML = `${hours}`;
         if (a[i].id === Object.keys(ele[0])[i]) {
           document.querySelector(".clock").style.backdropFilter = "blur(1px)";
           let urlimg = `url(./images/${a[i].id}.jpg)`;
