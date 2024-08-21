@@ -7,7 +7,7 @@ setInterval(() => {
   let p = document.querySelector("p");
   let a = document.querySelectorAll("a");
   if (hours === 24) {
-    hours=0;
+    hours= 0;
   }
   if (!isclicked) {
     document.querySelector(".hours").innerHTML =
@@ -28,8 +28,7 @@ setInterval(() => {
         p.innerHTML = `${Object.keys(ele[0])[i]} clock`;
         hours = formatter.format(dateNow).split(":")[0];
         console.log(Object.keys(ele[0])[i]);
-        document.querySelector(".hours").innerHTML =
-          `${hours}` < 10 ? `0${hours}` : hours;
+        document.querySelector(".hours").innerHTML =`${hours}`;
         if (a[i].id === Object.keys(ele[0])[i]) {
           document.querySelector(".clock").style.backdropFilter = "blur(1px)";
           let urlimg = `url(./images/${a[i].id}.jpg)`;
