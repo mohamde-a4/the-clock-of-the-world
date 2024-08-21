@@ -7,8 +7,9 @@ setInterval(() => {
   let p = document.querySelector("p");
   let a = document.querySelectorAll("a");
   if (!isclicked) {
-    // if (hours === 24) {
-    // }
+    if (hours === 24) {
+      console.log("hours does equal 24");
+    }
     hours= 0;
     document.querySelector(".hours").innerHTML =
     `${hours}` < 10 ? `0${hours}` : hours;
