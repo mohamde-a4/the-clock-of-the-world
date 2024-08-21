@@ -6,7 +6,7 @@ setInterval(() => {
   let seconds = dateNow.getUTCSeconds();
   let p = document.querySelector("p");
   let a = document.querySelectorAll("a");
-  if (hours <= 24) {
+  if (hours >= 24) {
     hours= 0;
   }
   if (!isclicked) {
