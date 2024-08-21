@@ -1,10 +1,10 @@
 [
     {
-        "Egypt":3,
-        "Italy":2,
-        "Usa":-4,
-        "Russia":3,
-        "France":2,
-        "Uk":1
+        "Egypt":"Africa/Cairo",
+        "Italy":"Europe/Rome",
+        "Usa":"America/New_York",
+        "Russia":"Europe/Moscow",
+        "France":"Europe/Paris",
+        "Uk":"Europe/London"
     }
 ]
