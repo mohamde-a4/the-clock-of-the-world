@@ -142,39 +142,45 @@ span {
 }
 
 @media only screen and (max-width: 600px) {
+
     html,
     body {
         height: 100%;
         width: 100vw;
     }
+
     body {
         overflow: hidden;
         background-position: center;
     }
+
     .dropdown {
         right: 10px;
     }
-.dropdown-content::-webkit-scrollbar {
-    width: 7.5px;
-  }
-  
-.dropdown-content::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-   
-.dropdown-content::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255); 
-    border-radius: 10px;
-  }
-  
+
+    .dropdown-content::-webkit-scrollbar {
+        width: 7.5px;
+    }
+
+    .dropdown-content::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+
+    .dropdown-content::-webkit-scrollbar-thumb {
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
     p {
         font-size: 40px;
     }
-    .clock{
+
+    .clock {
         width: 290px;
         height: 290px;
     }
-.dropdown-content {
+
+    .dropdown-content {
         right: 5px;
         height: 100px;
         overflow-y: auto;
