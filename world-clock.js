@@ -6,6 +6,15 @@ setInterval(() => {
   let seconds = dateNow.getUTCSeconds();
   let p = document.querySelector("p");
   let a = document.querySelectorAll("a");
+  let btn = document.querySelector(".dropdown");
+  btn.onclick = () => {
+    let dpc = document.querySelector(".dropdown-content");
+    if (dpc.style.display === "block") {
+      dpc.style.display = "none";
+    } else {
+      dpc.style.display = "block";
+    }
+  };
   switch (hours) {
     case 24:
       hours = 0;
@@ -19,7 +28,7 @@ setInterval(() => {
   }
   if (!isclicked) {
     document.querySelector(".hours").innerHTML =
-    `${hours}` < 10 ? `0${hours}` : hours;
+      `${hours}` < 10 ? `0${hours}` : hours;
   }
   for (let i = 0; i < a.length; i++) {
     a[i].onclick = async () => {
