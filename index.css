@@ -19,7 +19,6 @@ body {
     background-repeat: no-repeat;
     background-image: url("./images/Egypt.jpg");
     animation: slide-down 0.7s linear;
-    background-size: 100% 100%;
     min-height: 75dvh;
     display: grid;
     place-items: center;
@@ -149,10 +148,11 @@ span {
         height: 100%;
         width: 100vw;
     }
-
+    body {
+        background-position: center;
+    }
     .dropdown {
         right: 10px;
-        top: -70px;
     }
 
     p {
