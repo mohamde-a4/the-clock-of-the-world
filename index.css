@@ -142,7 +142,6 @@ span {
 }
 
 @media only screen and (max-width: 600px) {
-
     html,
     body {
         height: 100%;
@@ -155,12 +154,30 @@ span {
     .dropdown {
         right: 10px;
     }
-
+.dropdown-content::-webkit-scrollbar {
+    width: 7.5px;
+  }
+  
+.dropdown-content::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border-radius: 10px;
+  }
+  
     p {
         font-size: 40px;
     }
-
+    .clock{
+        width: 290px;
+        height: 290px;
+    }
 .dropdown-content {
-        right: 5px
+        right: 5px;
+        height: 100px;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 }
