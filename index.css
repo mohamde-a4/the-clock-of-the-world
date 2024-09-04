@@ -149,6 +149,7 @@ span {
         width: 100vw;
     }
     body {
+        overflow: hidden;
         background-position: center;
     }
     .dropdown {
