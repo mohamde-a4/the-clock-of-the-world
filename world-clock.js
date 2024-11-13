@@ -1,7 +1,13 @@
 let isclicked = false;
 setInterval(() => {
   let dateNow = new Date();
-  let hours = dateNow.getUTCHours() + 3;
+  let hours =  new Intl.DateTimeFormat("en-US", {
+    hour: "numeric",
+    hour12: false,
+    minute: "numeric",
+    second: "numeric",
+    timeZone: "Africa/Cairo",
+  }).format(dateNow).split(":")[0];
   let minutes = dateNow.getUTCMinutes();
   let seconds = dateNow.getUTCSeconds();
   let p = document.querySelector("p");
@@ -15,17 +21,6 @@ setInterval(() => {
       dpc.style.display = "block";
     }
   };
-  switch (hours) {
-    case 24:
-      hours = 0;
-      break;
-    case 25:
-      hours = 1;
-      break;
-    case 26:
-      hours = 2;
-      break;
-  }
   if (!isclicked) {
     document.querySelector(".hours").innerHTML =
       `${hours}` < 10 ? `0${hours}` : hours;

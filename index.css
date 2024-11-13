@@ -101,7 +101,7 @@ p {
 }
 
 .clock {
-    background: rgba(39, 39, 39, 0.280);
+    background: rgb(0 0 0 / 0%);
     backdrop-filter: blur(3px);
     display: flex;
     flex-wrap: nowrap;
@@ -156,6 +156,7 @@ span {
 
     .dropdown {
         right: 10px;
+        top: -25%;
     }
 
     .dropdown-content::-webkit-scrollbar {
