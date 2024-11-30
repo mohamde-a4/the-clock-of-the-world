@@ -22,8 +22,7 @@ setInterval(() => {
     }
   };
   if (!isclicked) {
-    document.querySelector(".hours").innerHTML =
-      `${hours}` < 10 ? `0${hours}` : hours;
+    document.querySelector(".hours").innerHTML = hours;
   }
   for (let i = 0; i < a.length; i++) {
     a[i].onclick = async () => {
